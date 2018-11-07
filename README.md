@@ -41,15 +41,20 @@ Location: Converse Hall 209
 - [Generating Myth - Hampshire student's thesis](http://5collbldh.org/dh/sandbox/bailey-fernandez-on-generating-myth-five-college-undergrad-fellow-projects-2017-2018/)
 
 ## Day 2
-[Introduction to Syntax](Twine-Intro-Game.html)
+[Introduction to Syntax](assets/Twine/Twine-Intro-Game.html)
+<br/>
+[Archive of "Introduction to Syntax" Game](assets/Twine/Twine-Intro-Game-Archive.html)
 
-[Archive of "Introduction to Syntax" Game](Twine-Intro-Game-Archive.html)
+### Resources
+- [draw.io](https://www.draw.io/) - Good for creating flow charts/storyboards
+- [Canva](https://www.canva.com) - Storyboarding software
+- [bubbl.us](https://bubbl.us) - Mind mapping software
 
-### Game-building Resources
-- [Unsplash](https://unsplash.com/)
-<!--   - When embedding images, -->
+- [Color Scheme Generator](https://coolors.co)
+- [Unsplash](https://unsplash.com/) - Find public domain images to include in your stories
 
 ## Day 3
+
 ### Publishing Platforms
 - [Submit your game to be published on this site](https://github.com/alexroseb/Intro-To-Twine/issues/new)
    - Create an issue titled with the name of your game
@@ -61,7 +66,7 @@ Location: Converse Hall 209
 - [GitHub Pages](http://github.com)
    - Create/log into GitHub account
    - Create repository named [your-username].github.io
-   - Rename your game file to `index.html`
+   - Rename your game file to 'index.html'
    - Upload your game file and any other files to your new repository
    - Visit [your-username].github.io to see your game up and running! (Give it a few minutes to compile first)
 
