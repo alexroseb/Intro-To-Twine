@@ -14,7 +14,7 @@ Location: Converse Hall 209
 - [Birdland](https://birdland.camp/) 
    - A surrealist piece of interactive fiction
    - Uses variables to store "mood levels" that prevent/let you take certain actions
-   - [Reviews of Birdland](http://ifdb.tads.org/viewgame?id=ap1651hvjldbuugj) - The game is novella-length (although can be paused at will, but I'd strongly suggest at least reading the reviews and playing a bit of it.
+   - [Reviews of Birdland](http://ifdb.tads.org/viewgame?id=ap1651hvjldbuugj) - The game is novella-length (although can be paused at will), but I'd strongly suggest at least reading the reviews and playing a bit of it.
 - [SPENT](http://playspent.org/html/)
    - Play as an unemployed adult forced to make tough choices
    - More gamified than some of the others

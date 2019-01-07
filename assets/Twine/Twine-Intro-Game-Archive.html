@@ -1,0 +1,72 @@
+<tw-storydata name="Intro-To-Twine" startnode="1" creator="Twine" creator-version="2.2.1" ifid="F5A7346D-23DE-43B3-B7EE-C10F1EC21F53" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+
+body, tw-story {
+ background-color: white;
+ color: black;
+}
+code {
+  font-family: monospace;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #969696;
+  padding: 2px;
+}
+h1{
+  font-size:16px;
+}
+h2{
+  font-size:14px;
+}
+a{
+  text-decoration: none;
+}
+.example{
+  border: 1px black solid;
+  border-radius: 3px;
+  margin: 10px;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Get Started" tags="" position="541,167.5" size="100,100">**Getting Started with Twine and Harlowe**
+
+What do you want to learn how to do?
+[[Add links to other passages]]
+[[Create simple programming]]
+[[Change the styling-&gt;Format text]]</tw-passagedata><tw-passagedata pid="2" name="Add links to other passages" tags="" position="390,332.5" size="100,100">**Adding links to other passages**
+While editing a passage, you will often want to link to other passages. Links in Twine are surrounded by &lt;code&gt;&#96;[[ ]]&#96;&lt;/code&gt;. 
+
+**Linking by passage name**
+If you already have other passages created, when you type &lt;code&gt;&#96;[&#96;[&lt;/code&gt; a menu will pop up where you can choose from those existing passages. You can also create a new passage by typing the new passage&#39;s name within the &lt;code&gt;&#96;[[ ]]&#96;&lt;/code&gt; tags. When you return to the story map, you will see the new passage linked to the original one with a directional arrow. You can then open and edit it. One thing to note is that if you use this method, then later go back and change the link text, it will become unlinked from the first passage and create a new one titled with the new link text. 
+
+**Linking with other text**
+If you want the text of the link to be different from the passage name, you can denote that with &lt;code&gt;&#96;[[link text-&gt;passage name]]&#96;&lt;/code&gt;. This could be useful if you want all your passages to have unique titles but have multiple places where the link text would be the same. This is also useful if you have multiple passages linking out to the same one using different text. 
+
+**Examples**
+&lt;code&gt;&#96;[[Go to the next page-&gt;next page]]&#96;&lt;/code&gt; = [[Go to the next page-&gt;next page]]
+&lt;code&gt;&#96;[[Example passage]]&#96;&lt;/code&gt; = [[Example passage]]</tw-passagedata><tw-passagedata pid="3" name="Format text" tags="" position="688,334.5" size="100,100">Individual text can be formatted using in-text notations or [[macros-&gt;Create simple programming]]. 
+
+**In-text notations**
+&lt;code&gt;&#96;//&#96;Italics&#96;//&#96;&lt;/code&gt;= //Italics//
+&lt;code&gt;&#96;&#39;&#39;&#96;Bold&#96;&#39;&#39;&#96;&lt;/code&gt; = &#39;&#39;Bold&#39;&#39;
+&lt;code&gt;&#96;~~&#96;Strikethrough&#96;~~&#96;&lt;/code&gt; = ~~Strikethrough~~
+&lt;code&gt;Super&#96;^^&#96;Script&#96;^^&#96;&lt;/code&gt; = Super^^Script^^
+
+To change the styling of the entire story, you&#39;ll need to know a little CSS. </tw-passagedata><tw-passagedata pid="4" name="next page" tags="" position="390,482.5" size="100,100">This passage is titled &quot;next page&quot;.
+[[Go back-&gt;Add links to other passages]]</tw-passagedata><tw-passagedata pid="5" name="Example passage" tags="" position="280,482.5" size="100,100">This passage is titled &quot;Example passage&quot;.
+[[Go back-&gt;Add links to other passages]]</tw-passagedata><tw-passagedata pid="6" name="Create simple programming" tags="" position="517,381.5" size="100,100">**Hooks**
+Special text in Twine is created using a functionality called Hooks. Wrap the section of text to be affected by the hook in &lt;code&gt;&#96;[ ]&#96;&lt;/code&gt;. 
+
+**Macros**
+You can affect hooks with functions called macros. These are created by writing the macro surrounded by &lt;code&gt;&#96;( )&#96;&lt;/code&gt;, then the hook text (surrounded by &lt;code&gt;&#96;[ ]&#96;&lt;/code&gt; as usual). 
+Macros can be used for many purposes. One is to add special styling to one piece of the passage, such as turning text a certain color or changing the font. 
+Example: &lt;code&gt;&#96;(color:green)[This text is green]&#96;&lt;/code&gt; = (color:green)[This text is green]
+
+**Naming Hooks**
+You can name a hook using the &lt;code&gt;&#96;[hook text]&lt;&#96;name&#96;|&#96;&lt;/code&gt; syntax (this is meant to look like a gift tag). Naming a hook means that you can keep the main text of your story clean, then add functionality at the bottom of each passage. 
+Naming also allows you to reference hooks in other places. For example, you can turn a hook into a link that will show more text on the page when clicked. 
+**Example**
+&lt;code&gt;&#96;[Click me!]&lt;clickable|&#96;
+&#96;(Click: ?clickable)[Then I show up]&#96;&lt;/code&gt; = 
+[Click me!]&lt;clickable|
+(Click: ?clickable)[Then I show up]</tw-passagedata><tw-passagedata pid="7" name="footer" tags="footer" position="247,206.6666717529297" size="100,100">
+
+[[Return to Home-&gt;Get Started]] 
+Alex Brenon, 2018</tw-passagedata><tw-passagedata pid="8" name=" " tags="" position="170,484.5" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+
