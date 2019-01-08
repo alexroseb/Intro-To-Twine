@@ -8,8 +8,6 @@ Location: Converse Hall 209
 
 ## Day 1 - Getting Started
 
-[Use Twine online](https://twinery.org/2) or [download Twine](https://twinery.org).
-
 ### Sample Games
 - [Birdland](https://birdland.camp/) 
    - A surrealist piece of interactive fiction
@@ -35,6 +33,8 @@ Location: Converse Hall 209
    - [Depression Quest](http://www.depressionquest.com/dqfinal.html)
    - [Twine Games on itch.io](https://itch.io/games/tag-twine)
 
+[Use Twine online](https://twinery.org/2) or [download Twine](https://twinery.org).
+
 ### Game Idea Resources
 - [Masterlist of Interactive Fiction Ideas/Mechanics](https://emshort.blog/2008/03/06/ideas-for-interactive-fiction/)
 - [Making Educational Games](https://edutwine.wordpress.com/ideas/)
@@ -43,7 +43,7 @@ Location: Converse Hall 209
 ## Day 2
 [Introduction to Syntax](assets/Twine/Twine-Intro-Game.html)
 <br/>
-[Archive of "Introduction to Syntax" Game](assets/Twine/Twine-Intro-Game-Archive.html)
+[Archive of "Introduction to Syntax" Game](assets/Twine/Twine-Intro-Game-Archive.html) - Right-click on this link and choose "Save link as...", then in Twine, choose "Import From File" on the right-hand sidebar and upload this file.
 
 ### Resources
 - [draw.io](https://www.draw.io/) - Good for creating flow charts/storyboards
@@ -58,7 +58,7 @@ Location: Converse Hall 209
 ### Publishing Platforms
 - [Submit your game to be published on this site](https://github.com/alexroseb/Intro-To-Twine/issues/new)
    - Create an issue titled with the name of your game
-   - Include any important information in the issue summary, including how you'd like to be credited
+   - Include any important information in the issue summary, including how you'd like to be credited and a the topic of your game
    - Upload all files necessary for your game (if there are multiple, it's easiest to upload a single zip file holding all of them)
 - [philome.la](http://philome.la/) - Free Twine hosting
    - If you have a Twitter account, you can host a game here for free
