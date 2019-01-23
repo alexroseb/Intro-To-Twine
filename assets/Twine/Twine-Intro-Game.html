@@ -37,12 +37,21 @@ a{
   border: 1px black solid;
   border-radius: 3px;
   margin: 10px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Get Started" tags="" position="541,167.5" size="100,100">**Getting Started with Twine and Harlowe**
+}
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+</script><tw-passagedata pid="1" name="Get Started" tags="" position="541,165" size="100,100">**Getting Started with Twine and Harlowe**
 
 What do you want to learn how to do?
 [[Add links to other passages]]
 [[Create simple programming]]
-[[Change the styling-&gt;Format text]]</tw-passagedata><tw-passagedata pid="2" name="Add links to other passages" tags="" position="390,332.5" size="100,100">**Adding links to other passages**
+[[Change the styling-&gt;Format text]]
+[[Track the history of a user&#39;s choices]]
+[[Use variables]]
+[[Set a timer]]</tw-passagedata><tw-passagedata pid="2" name="Add links to other passages" tags="" position="390,344" size="100,100">**Adding links to other passages**
 While editing a passage, you will often want to link to other passages. Links in Twine are surrounded by &lt;code&gt;&#96;[[ ]]&#96;&lt;/code&gt;. 
 
 **Linking by passage name**
@@ -53,7 +62,7 @@ If you want the text of the link to be different from the passage name, you can 
 
 **Examples**
 &lt;code&gt;&#96;[[Go to the next page-&gt;next page]]&#96;&lt;/code&gt; = [[Go to the next page-&gt;next page]]
-&lt;code&gt;&#96;[[Example passage]]&#96;&lt;/code&gt; = [[Example passage]]</tw-passagedata><tw-passagedata pid="3" name="Format text" tags="" position="688,334.5" size="100,100">Individual text can be formatted using in-text notations or [[macros-&gt;Create simple programming]]. 
+&lt;code&gt;&#96;[[Example passage]]&#96;&lt;/code&gt; = [[Example passage]]</tw-passagedata><tw-passagedata pid="3" name="Format text" tags="" position="688,346" size="100,100">Individual text can be formatted using in-text notations or [[macros-&gt;Create simple programming]]. 
 
 **In-text notations**
 &lt;code&gt;&#96;//&#96;Italics&#96;//&#96;&lt;/code&gt;= //Italics//
@@ -61,14 +70,21 @@ If you want the text of the link to be different from the passage name, you can 
 &lt;code&gt;&#96;~~&#96;Strikethrough&#96;~~&#96;&lt;/code&gt; = ~~Strikethrough~~
 &lt;code&gt;Super&#96;^^&#96;Script&#96;^^&#96;&lt;/code&gt; = Super^^Script^^
 
-To change the styling of the entire story, you&#39;ll need to know a little CSS. </tw-passagedata><tw-passagedata pid="4" name="next page" tags="" position="390,482.5" size="100,100">This passage is titled &quot;next page&quot;.
-[[Go back-&gt;Add links to other passages]]</tw-passagedata><tw-passagedata pid="5" name="Example passage" tags="" position="280,482.5" size="100,100">This passage is titled &quot;Example passage&quot;.
-[[Go back-&gt;Add links to other passages]]</tw-passagedata><tw-passagedata pid="6" name="Create simple programming" tags="" position="517,381.5" size="100,100">**Hooks**
+**Macros**
+The &lt;a href=&quot;https://twine2.neocities.org/#macro_align&quot; target=&quot;_blank&quot;&gt;text styling macros&lt;/a&gt; can be used to change aspects of certain text&#39;s appearance. You can change the background color, text color, and overall styling with simple macros, as well as just inserting some CSS. For colors, you need to find the &lt;a href=&quot;https://htmlcolorcodes.com/&quot; target=&quot;_blank&quot;&gt;hex code&lt;/a&gt; of the color you want in order to insert it. For fonts, you want to be careful to choose a &lt;a href=&quot;https://websitesetup.org/web-safe-fonts-html-css/&quot; target=&quot;_blank&quot;&gt;web-safe font &lt;/a&gt; to make sure it&#39;ll look the same on anyone&#39;s computer.
+&lt;code&gt;&#96;(&#96;color: #FF33F5&#96;)[&#96;Pink text&#96;]&#96;&lt;/code&gt;=(color: #FF33F5)[Pink text]
+&lt;code&gt;&#96;(&#96;text-style: &quot;mirror&quot;&#96;)[&#96;Mirrored text&#96;]&#96;&lt;/code&gt;=(text-style: &quot;mirror&quot;)[Mirrored text]
+&lt;code&gt;&#96;(&#96;font:&quot;Arial&quot;&#96;)[&#96;Arial text&#96;]&#96;&lt;/code&gt;=(font:&quot;Arial&quot;)[Arial text]
+
+**CSS**
+CSS stands for &quot;Cascading Style Sheets&quot; and is what every website uses to change how they look. In Twine, you can change the styling of the whole site </tw-passagedata><tw-passagedata pid="4" name="next page" tags="" position="390,494" size="100,100">This passage is titled &quot;next page&quot;.
+[[Go back-&gt;Add links to other passages]]</tw-passagedata><tw-passagedata pid="5" name="Example passage" tags="" position="280,494" size="100,100">This passage is titled &quot;Example passage&quot;.
+[[Go back-&gt;Add links to other passages]]</tw-passagedata><tw-passagedata pid="6" name="Create simple programming" tags="" position="515,395" size="100,100">**Hooks**
 Special text in Twine is created using a functionality called Hooks. Wrap the section of text to be affected by the hook in &lt;code&gt;&#96;[ ]&#96;&lt;/code&gt;. 
 
 **Macros**
 You can affect hooks with functions called macros. These are created by writing the macro surrounded by &lt;code&gt;&#96;( )&#96;&lt;/code&gt;, then the hook text (surrounded by &lt;code&gt;&#96;[ ]&#96;&lt;/code&gt; as usual). 
-Macros can be used for many purposes. One is to add special styling to one piece of the passage, such as turning text a certain color or changing the font. 
+Macros can be used for many purposes. One is to ****
 Example: &lt;code&gt;&#96;(color:green)[This text is green]&#96;&lt;/code&gt; = (color:green)[This text is green]
 
 **Naming Hooks**
@@ -78,10 +94,49 @@ Naming also allows you to reference hooks in other places. For example, you can 
 &lt;code&gt;&#96;[Click me!]&lt;clickable|&#96;
 &#96;(Click: ?clickable)[Then I show up]&#96;&lt;/code&gt; = 
 [Click me!]&lt;clickable|
-(Click: ?clickable)[Then I show up]</tw-passagedata><tw-passagedata pid="7" name="footer" tags="footer" position="247,206.6666717529297" size="100,100">
+(Click: ?clickable)[Then I show up]</tw-passagedata><tw-passagedata pid="7" name="footer" tags="footer" position="247,218" size="100,100">
 
 [[Return to Home-&gt;Get Started]] 
-Alex Brenon, 2018</tw-passagedata><tw-passagedata pid="8" name=" " tags="" position="170,484.5" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+Alex Brenon, 2018</tw-passagedata><tw-passagedata pid="8" name=" " tags="" position="170,496" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="Track the history of a user&#39;s choices" tags="" position="799,217" size="100,100">**Track user history**
+Twine has a built-in variable with all the names of the passages that a user has already visited. Note: if the person uses the &quot;Undo&quot;/&quot;Back&quot; button, the passage will not be in their history list.
+
+To show the user their history, use:
+&lt;code&gt;&#96;(&#96;print: &#96;(&#96;history:&#96;))&#96;&lt;/code&gt; = (print: (history:))
+
+To check if a certain passage is in the history, use:
+&lt;code&gt;&#96;(&#96;if: &#96;(&#96;history:&#96;)&#96; contains &quot;Get Started&quot;&#96;)[&#96;The history contains the passage &quot;Get Started!&quot;&#96;]&#96;&lt;/code&gt; = (if: (history:) contains &quot;Get Started&quot;)[The history contains the passage &quot;Get Started!&quot;]
+
+&lt;code&gt;&#96;(&#96;if: not &#96;(&#96;history:&#96;)&#96; contains &quot;Get Started&quot;&#96;)[&#96;The history does not contain the passage &quot;Get Started!&quot;&#96;]&#96;&lt;/code&gt; = (if: not (history:) contains &quot;Get Started&quot;)[The history does not contain the passage &quot;Get Started!&quot;]
+
+&lt;a href=&quot;https://twine2.neocities.org/#macro_history&quot; target=&quot;_blank&quot;&gt; Learn more about the history macro.&lt;/a&gt;
+&lt;a href=&quot;https://twine2.neocities.org/#macro_if&quot; target=&quot;_blank&quot;&gt; Learn more about &quot;if&quot; statements in Twine. &lt;/a&gt;</tw-passagedata><tw-passagedata pid="10" name="Use variables" tags="" position="693,95" size="100,100">A variable stores a value across multiple passages. Variables can hold things like numbers, strings, and lists of things. Variables can also be changed in any passage, and the new value will carry through the rest of the story.
+
+Variables can have any name that&#39;s a string of letters and numbers (but can&#39;t start with a number), and always have a dollar sign in front of them.
+To set the value of a variable, use the &lt;code&gt;set:&lt;/code&gt; macro. 
+&lt;code&gt;&#96;(&#96;set: &#96;$&#96;name to &quot;Alex&quot;&#96;)&#96;&lt;/code&gt;(set: $name to &quot;Alex&quot;)
+
+Display a variable value in the middle of the sentence by just writing its name. 
+&lt;code&gt;The name variable is &#96;$&#96;name.&lt;/code&gt; = The name variable is $name. 
+
+Variable values can be changed using the &lt;code&gt;set&lt;/code&gt; macro.
+</tw-passagedata><tw-passagedata pid="11" name="Set a timer" tags="" position="343,71" size="100,100">(set: $counter to 30)
+You have |amount&gt;[$counter] seconds left!
+
+(live: 1s)[
+	(set: $counter to it - 1)
+	(if: $counter is 0)[(go-to: &quot;Time&#39;s Up&quot;)]
+	(replace: ?amount)[$counter]
+]
+
+Code for this page:
+&lt;code&gt;&#96;(&#96;set: &#96;$&#96;counter to 30&#96;)&#96;&lt;/code&gt; This sets up a &quot;counter&quot; variable to hold the amount of time left.
+&lt;code&gt;You have &#96;|&#96;amount&#96;&gt;[$&#96;counter&#96;]&#96; seconds left!&lt;/code&gt; The amount hook will update as the &quot;counter&quot; variable changes.
+
+&lt;code&gt;&#96;(&#96;live: 1s&#96;)[&#96;&lt;/code&gt; Every 1 second, this loop will run.
+&lt;code&gt;&amp;Tab;&#96;(&#96;set: &#96;$&#96;counter to it - 1&#96;)&#96;&lt;/code&gt; Set the counter variable to its current value minus one (decrease it by one).
+&lt;code&gt;&amp;Tab;&#96;(&#96;if: &#96;$&#96;counter is 0&#96;)[(&#96;go-to: &quot;Time&#39;s Up&quot;&#96;)]&#96;&lt;/code&gt;
+&lt;code&gt;&amp;Tab;&#96;(&#96;replace: ?amount&#96;)[$&#96;counter&#96;]&#96;&lt;/code&gt;
+&lt;code&gt;&#96;]&#96;&lt;/code&gt;</tw-passagedata><tw-passagedata pid="12" name="Time&#39;s Up" tags="" position="221,73" size="100,100">The timer ran out!</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
