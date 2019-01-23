@@ -51,6 +51,8 @@ Location: Converse Hall 209
 - [bubbl.us](https://bubbl.us) - Mind mapping software
 
 - [Color Scheme Generator](https://coolors.co)
+- [HTML Color List](https://htmlcolorcodes.com/)
+- [Web-Safe Fonts](https://websitesetup.org/web-safe-fonts-html-css/)
 - [Unsplash](https://unsplash.com/) - Find public domain images to include in your stories
 
 ## Day 3
