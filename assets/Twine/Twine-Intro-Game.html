@@ -43,7 +43,7 @@ a{
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
-</script><tw-passagedata pid="1" name="Get Started" tags="" position="541,165" size="100,100">**Getting Started with Twine and Harlowe**
+</script><tw-passagedata pid="1" name="Get Started" tags="" position="543,165" size="100,100">**Getting Started with Twine and Harlowe**
 
 What do you want to learn how to do?
 [[Add links to other passages]]
@@ -51,7 +51,8 @@ What do you want to learn how to do?
 [[Change the styling-&gt;Format text]]
 [[Track the history of a user&#39;s choices]]
 [[Use variables]]
-[[Set a timer]]</tw-passagedata><tw-passagedata pid="2" name="Add links to other passages" tags="" position="390,344" size="100,100">**Adding links to other passages**
+[[Set a timer]]
+[[Add images]]</tw-passagedata><tw-passagedata pid="2" name="Add links to other passages" tags="" position="390,344" size="100,100">**Adding links to other passages**
 While editing a passage, you will often want to link to other passages. Links in Twine are surrounded by &lt;code&gt;&#96;[[ ]]&#96;&lt;/code&gt;. 
 
 **Linking by passage name**
@@ -77,14 +78,20 @@ The &lt;a href=&quot;https://twine2.neocities.org/#macro_align&quot; target=&quo
 &lt;code&gt;&#96;(&#96;font:&quot;Arial&quot;&#96;)[&#96;Arial text&#96;]&#96;&lt;/code&gt;=(font:&quot;Arial&quot;)[Arial text]
 
 **CSS**
-CSS stands for &quot;Cascading Style Sheets&quot; and is what every website uses to change how they look. In Twine, you can change the styling of the whole site </tw-passagedata><tw-passagedata pid="4" name="next page" tags="" position="390,494" size="100,100">This passage is titled &quot;next page&quot;.
+CSS stands for &quot;Cascading Style Sheets&quot; and is what every website uses to change how they look. In Twine, you can change the styling of the whole site as well as individual sections of text.
+To change the colors and styling of every passage, put the styling you want in the &lt;code&gt;body, tw-story&lt;/code&gt; section.
+For this game, the styles are:
+&lt;code&gt;body, tw-story &#96;{&#96;
+&amp;Tab; background-color: white;
+&amp;Tab; color: black;
+&#96;}&#96;&lt;/code&gt;</tw-passagedata><tw-passagedata pid="4" name="next page" tags="" position="390,494" size="100,100">This passage is titled &quot;next page&quot;.
 [[Go back-&gt;Add links to other passages]]</tw-passagedata><tw-passagedata pid="5" name="Example passage" tags="" position="280,494" size="100,100">This passage is titled &quot;Example passage&quot;.
 [[Go back-&gt;Add links to other passages]]</tw-passagedata><tw-passagedata pid="6" name="Create simple programming" tags="" position="515,395" size="100,100">**Hooks**
 Special text in Twine is created using a functionality called Hooks. Wrap the section of text to be affected by the hook in &lt;code&gt;&#96;[ ]&#96;&lt;/code&gt;. 
 
 **Macros**
 You can affect hooks with functions called macros. These are created by writing the macro surrounded by &lt;code&gt;&#96;( )&#96;&lt;/code&gt;, then the hook text (surrounded by &lt;code&gt;&#96;[ ]&#96;&lt;/code&gt; as usual). 
-Macros can be used for many purposes. One is to ****
+Macros can be used for many purposes. One is to style text.
 Example: &lt;code&gt;&#96;(color:green)[This text is green]&#96;&lt;/code&gt; = (color:green)[This text is green]
 
 **Naming Hooks**
@@ -119,7 +126,13 @@ Display a variable value in the middle of the sentence by just writing its name.
 &lt;code&gt;The name variable is &#96;$&#96;name.&lt;/code&gt; = The name variable is $name. 
 
 Variable values can be changed using the &lt;code&gt;set&lt;/code&gt; macro.
-</tw-passagedata><tw-passagedata pid="11" name="Set a timer" tags="" position="343,71" size="100,100">(set: $counter to 30)
+&lt;code&gt;&#96;(&#96;set: &#96;$&#96;number to 0&#96;)&#96;&lt;/code&gt;(set: $number to 0)
+
+&lt;code&gt;The number variable is &#96;$&#96;number.&lt;/code&gt; = The number variable is $number.
+
+&lt;code&gt;&#96;(&#96;set: &#96;$&#96;number to &#96;$&#96;number + 1&#96;)&#96;&lt;/code&gt;(set: $number to $number + 1)
+
+&lt;code&gt;The number variable is now &#96;$&#96;number.&lt;/code&gt; = The number variable is now $number.</tw-passagedata><tw-passagedata pid="11" name="Set a timer" tags="" position="343,71" size="100,100">(set: $counter to 30)
 You have |amount&gt;[$counter] seconds left!
 
 (live: 1s)[
@@ -133,10 +146,15 @@ Code for this page:
 &lt;code&gt;You have &#96;|&#96;amount&#96;&gt;[$&#96;counter&#96;]&#96; seconds left!&lt;/code&gt; The amount hook will update as the &quot;counter&quot; variable changes.
 
 &lt;code&gt;&#96;(&#96;live: 1s&#96;)[&#96;&lt;/code&gt; Every 1 second, this loop will run.
-&lt;code&gt;&amp;Tab;&#96;(&#96;set: &#96;$&#96;counter to it - 1&#96;)&#96;&lt;/code&gt; Set the counter variable to its current value minus one (decrease it by one).
+&lt;code&gt;&amp;Tab;&#96;(&#96;set: &#96;$&#96;counter to &#96;$counter&#96; - 1&#96;)&#96;&lt;/code&gt; Set the counter variable to its current value minus one (decrease it by one).
 &lt;code&gt;&amp;Tab;&#96;(&#96;if: &#96;$&#96;counter is 0&#96;)[(&#96;go-to: &quot;Time&#39;s Up&quot;&#96;)]&#96;&lt;/code&gt;
 &lt;code&gt;&amp;Tab;&#96;(&#96;replace: ?amount&#96;)[$&#96;counter&#96;]&#96;&lt;/code&gt;
-&lt;code&gt;&#96;]&#96;&lt;/code&gt;</tw-passagedata><tw-passagedata pid="12" name="Time&#39;s Up" tags="" position="221,73" size="100,100">The timer ran out!</tw-passagedata></tw-storydata>
+&lt;code&gt;&#96;]&#96;&lt;/code&gt;</tw-passagedata><tw-passagedata pid="12" name="Time&#39;s Up" tags="" position="221,73" size="100,100">The timer ran out!</tw-passagedata><tw-passagedata pid="13" name="Add images" tags="" position="565,31" size="100,100">**Adding images**
+Use the HTML method of adding images to put them into your game. You can either reference an online image or use one on your computer. (If you use one on your computer, it won&#39;t show up when you play-test the game within Twine, only when you save and export it). You can also set the width and/or height in pixels that you want the image to be. If you set only one, the image will scale to fit that value.
+Below, I embedded an image from &lt;a href=&quot;https://unsplash.com/&quot; target=&quot;_blank&quot;&gt;Unsplash&lt;/a&gt;, which is a fantastic repository of free high-quality photos. When you find an image you like on there, right-click on it and select &quot;Copy image address&quot;, then paste that address in the &quot;src&quot; attribute of the image tag in Twine.
+
+&lt;code&gt;&#96;&lt;&#96;img src=&quot;https://images.unsplash.com/photo-1448216118999-7a3f98dc37f2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60&quot; width=&quot;100&quot;&#96;/&gt;&#96;&lt;/code&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1448216118999-7a3f98dc37f2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60&quot; width=&quot;300&quot;/&gt;</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
